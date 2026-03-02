@@ -1,2 +1,5 @@
 # Ігнорувати всі log файли 
 *.log
+.DS_Store
+.idea/
+cmake-build-*/

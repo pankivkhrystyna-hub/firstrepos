@@ -8,4 +8,6 @@ add_executable(shop main.cpp
         Order.h
         Order.h
         Customer.cpp
-        Customer.h)
+        Customer.h
+        Product.cpp
+        Product.h)

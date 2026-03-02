@@ -19,7 +19,7 @@ class Customer {
 
     void display();
 
-    ~Customer()
+    ~Customer();
     };
 
 

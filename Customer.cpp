@@ -14,6 +14,11 @@ Customer::Customer(std::string name )
    : Customer(name, std::string(""), std::string(""))    {
 }
 
+Customer::Customer()
+   : Customer(std::string(""), std::string(""), std::string ())    {}
+
+Customer::~Customer(){}
+
 void Customer::display() {
    std::cout << "\nCustomer: " << std::endl;
    std::cout << name << std::endl;

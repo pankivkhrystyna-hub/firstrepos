@@ -5,4 +5,5 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(shop main.cpp
         Order.cpp
+        Order.h
         Order.h)

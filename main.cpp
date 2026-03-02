@@ -78,5 +78,11 @@ public:
 };
 
 int main() {
+    Order order1(1232,"Order Iphone", 16700, "Processing", "Card");
+    order1.print();
+    Customer customer1("Andrey");
+    customer1.print();
+    Product product1;
+    product1.print();
     return 0;
 }

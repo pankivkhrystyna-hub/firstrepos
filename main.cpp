@@ -57,6 +57,26 @@ public:
     ~Customer() {}
 };
 
+class Product {
+private:
+    int price;
+    string name;
+    string description;
+    string category;
+public:
+    Product(int pric = 16700, string namee= "iPhone", string describ= "Beautiful :)", string categ= "Phone") : price(pric),name(namee), description(describ), category(categ) {} //миттєве ініціалізування
+    // Product(int pric=16700, string namee= "Iphone", string describ = "Beautifil :)", string categ = "Mobile") : price(pric),name(namee), description(describ), category(categ) {} //миттєва ініціалізація і присвоєння значень
+
+    void print() {
+        cout <<endl<<"Product:" <<endl
+        << "price: " << price << endl
+        << "name: " << name << endl
+        << "desciption: " << description<<endl
+        <<"category: " << category << endl;
+    }
+    ~Product(){}
+};
+
 int main() {
     return 0;
 }

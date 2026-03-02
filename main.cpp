@@ -34,6 +34,28 @@ public:
     ~Order() {} //деструктор
 };
 
+class Customer {
+private:
+    string name;
+    string email;
+    string phone;
+public:
+    Customer(string n, string e, string p) {
+        name = n;
+        email = e;
+        phone = p;
+    }
+    //Customer(string n, string e) : Customer(n, e, "") {}//коструктор делегування
+    Customer(string n) : Customer(n, "andrey@email" , "+3805674567") {} //коструктор делегування
+    //Customer() : Customer("", "","") {}
+    void print() {
+        cout << endl<<"Customer"<<endl<<
+            "name: " << name<< endl
+        << "email: " << email << endl
+        << "phone: " << phone<<endl;
+    }
+    ~Customer() {}
+};
 
 int main() {
     return 0;

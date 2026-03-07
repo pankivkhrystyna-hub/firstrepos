@@ -9,8 +9,15 @@ private:
     std::string description;
     std::string category;
     public:
+    Product( std::string name, int price, std::string description, std::string category);
 
-    Product( std::string name= "iPhone", int pric = 16700, std::string describ= "Beautiful :)", std::string category= "Phone");
+    Product( std::string name, int price, std::string description);
+
+    Product( std::string name, int price);
+
+    Product( std::string name);
+
+    Product ();
 
    ~Product();
 

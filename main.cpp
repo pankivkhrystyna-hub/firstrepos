@@ -9,7 +9,7 @@ int main() {
     order1.display();
     Customer customer1("Andrey", "andrey@email.com", "+3800954636");
     customer1.display();
-    Product product1;
+    Product product1("iPhone", 78000, "Beautiful :)", "Card");
     product1.display();
 
     return 0;

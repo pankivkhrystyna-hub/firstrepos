@@ -26,6 +26,8 @@
 
         Order(const Order &order);
 
+        Order (Order &&order);
+
         ~Order();
 
         void display();

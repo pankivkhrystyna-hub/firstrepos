@@ -20,13 +20,21 @@ Order::Order()
     :Order(0, std::string(""), 0.0, std::string(""), std::string("")){}
 
 Order::Order( const Order &order) : id(order.id), name(order.name), totalamount(order.totalamount), status(order.status), paymentmethod(order.paymentmethod){
-    std::cout << "Copy constructor was called " << std::endl;
+    std::cout << "\nCopy constructor was called " << std::endl;
+}
+
+Order::Order(Order&& other) : id(other.id), name(other.name), totalamount(other.totalamount), status(other.status), paymentmethod(other.paymentmethod) {
+    std::cout << "\nMove constructor was called " << std::endl;
+    other.id = 0;
+    other.name = "";
+    other.totalamount = 0;
+    other.status= "";
+    other.paymentmethod = "";
 }
 
 Order::~Order() {
-    std::cout << "Data was released" << std::endl;
+    std::cout << "\nData was released" << std::endl;
 }
-//Order::~Order() {}
 
 void Order::display() {
     std::cout << "order:"<<std::endl<<"id: "

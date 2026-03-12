@@ -15,6 +15,11 @@ Product::Product(std::string name)
 
 Product::Product() {}
 
+Product::Product(const Product &other)
+: name{other.name}, price{other.price}, description(other.description),category (other.category) {
+  std::cout << "Copy constructor was called" << std::endl;
+}
+
 Product::~Product() {}
 
 void Product::display() {std::cout << "\nProduct: " << std::endl;

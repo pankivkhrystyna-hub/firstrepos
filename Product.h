@@ -19,6 +19,8 @@ private:
 
     Product ();
 
+    Product (const Product &other);
+
    ~Product();
 
     void display();

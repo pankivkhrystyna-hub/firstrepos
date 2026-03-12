@@ -2,6 +2,7 @@
 #define SHOP_ORDER_H
 #include <string>
 
+
     class Order {
     private:
         int id;
@@ -22,6 +23,8 @@
         Order(int id);
 
         Order();
+
+        Order(const Order &order);
 
         ~Order();
 

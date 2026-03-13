@@ -11,6 +11,7 @@
         std::string status;
         std::string paymentmethod;
     public:
+        static int count;
         //Перевантаження конструктора
         Order(int id, std::string name, double total, std::string status, std::string payment);
 
@@ -28,9 +29,14 @@
 
         Order (Order &&order);
 
+        void SetTotalAmount(double totalamount);
+
+        double GetTotalAmount() const;
+
+        static int GetCount();
         ~Order();
 
-        void display();
+        void display() const;
     };
 
 

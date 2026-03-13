@@ -1,8 +1,12 @@
 #include "Order.h"
 #include <iostream>
 
+int Order::count=0;
+
 Order::Order(int id, std::string name, double totalamount, std::string status, std::string paymentmethod)
-  : id(id), name(name) , totalamount(totalamount), status(status), paymentmethod(paymentmethod) {}
+  : id(id), name(name) , totalamount(totalamount), status(status), paymentmethod(paymentmethod) {
+    count++;
+}
 
 Order::Order(int id, std::string name, double totalamount, std::string status)
     :Order(id, name, totalamount, status, std::string("Uknown")){}
@@ -32,12 +36,25 @@ Order::Order(Order&& other) : id(other.id), name(other.name), totalamount(other.
     other.paymentmethod = "";
 }
 
+void Order::SetTotalAmount(double totalamount) {
+    this->totalamount = totalamount;
+}
+
+double Order::GetTotalAmount() const {
+
+    return this->totalamount;
+}
+
+int Order::GetCount() {
+    return count;
+}
+
 Order::~Order() {
     std::cout << "\nData was released" << std::endl;
 }
 
-void Order::display() {
-    std::cout << "order:"<<std::endl<<"id: "
+void Order::display() const {
+    std::cout <<std::endl<< "order:"<<std::endl<<"id: "
     << id << std::endl<<"name: " << name <<
         std::endl<< "totalamout: " << totalamount
     <<std::endl<<"status: " << status << std::endl<<

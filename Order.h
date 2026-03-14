@@ -34,6 +34,7 @@
         double GetTotalAmount() const;
 
         static int GetCount();
+
         ~Order();
 
         void display() const;

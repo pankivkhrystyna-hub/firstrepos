@@ -20,6 +20,10 @@ Product::Product(const Product &other)
   std::cout << "Copy constructor was called" << std::endl;
 }
 
+Product  Product::operator+() const{
+  return Product(name,price+price, description, category);
+}
+
 Product  Product::operator+(const Product &other) const {
   std::string NewName = this->name + " " + other.name;
   int NewPrice = this->price + other.price;
@@ -28,6 +32,7 @@ Product  Product::operator+(const Product &other) const {
 
   return Product(NewName, NewPrice, NewDescription, NewCategory);
 }
+
 std::ostream& operator<<(std::ostream& os, const Product &other) {
   os << "\nProduct name: " <<other.name << "\nProduct price: "
   << other.price << "\nProduct descriprion: "<<other.description
@@ -48,7 +53,8 @@ std::istream& operator>>(std::istream& is, Product &other) {
 }
 Product::~Product() {}
 
-void Product::display() {std::cout << "\nProduct: " << std::endl;
+void Product::display() const  {
+std::cout << "\nProduct: " << std::endl;
   std::cout << name << std::endl;
   std::cout << price << std::endl;
   std::cout << description << std::endl;

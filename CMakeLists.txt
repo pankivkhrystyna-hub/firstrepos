@@ -10,4 +10,8 @@ add_executable(shop main.cpp
         Customer.cpp
         Customer.h
         Product.cpp
-        Product.h)
+        Product.h
+        Electronics.cpp
+        Electronics.h
+        Accessory.cpp
+        Accessory.h)

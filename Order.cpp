@@ -29,6 +29,7 @@ Order::Order( const Order &order) : id(order.id), name(order.name), totalamount(
 
 Order::Order(Order&& other) : id(other.id), name(other.name), totalamount(other.totalamount), status(other.status), paymentmethod(other.paymentmethod) {
     std::cout << "\nMove constructor was called " << std::endl;
+    std::cout<<"\nNew order with moved data: "<<std::endl;
     other.id = 0;
     other.name = "";
     other.totalamount = 0;

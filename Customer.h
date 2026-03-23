@@ -9,7 +9,6 @@ class Customer {
         std::string email;
         std::string phone;
     public:
-
     Customer(std::string name = "Unknown", std::string email = "Unknown", std::string phone= "Unknown");
 
     void display();

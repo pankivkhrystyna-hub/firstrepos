@@ -21,6 +21,8 @@ private:
 
     Product (const Product &other);
 
+    Product operator+() const;
+
     Product operator+(const Product &other) const;
 
     friend std::ostream& operator<<(std::ostream& os, const Product &other);
@@ -29,7 +31,7 @@ private:
 
    ~Product();
 
-    void display();
+    void display() const;
 
 };
 

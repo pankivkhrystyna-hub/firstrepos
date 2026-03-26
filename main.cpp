@@ -51,5 +51,9 @@ int main() {
     electronics1.display();
     Accessory accessory1;
     accessory1.display();
+
+    cout<<"Let's try create an order with object product:"<<endl;
+    Order orderr(123,"Order with Product", 123000, "Processing", "Card",product4);
+    orderr.display();
     return 0;
 }

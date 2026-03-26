@@ -14,4 +14,6 @@ add_executable(shop main.cpp
         Electronics.cpp
         Electronics.h
         Accessory.cpp
-        Accessory.h)
+        Accessory.h
+        Item.cpp
+        Item.h)

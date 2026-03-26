@@ -2,17 +2,22 @@
 #define SHOP_ORDER_H
 #include <string>
 
+#include "Product.h"
 
-    class Order {
+
+class Order {
     private:
         int id;
         std::string name;
         double totalamount;
         std::string status;
         std::string paymentmethod;
+        Product product; //has a
     public:
         static int count;
         //Перевантаження конструктора
+        Order(int id, std::string name, double total, std::string status, std::string payment, Product product);
+
         Order(int id, std::string name, double total, std::string status, std::string payment);
 
         Order(int id, std::string name, double total, std::string status);

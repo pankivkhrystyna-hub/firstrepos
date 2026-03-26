@@ -62,5 +62,13 @@ int main() {
    cout<<"Після Override: "<<endl;
     ptr->display();
 
+    cout<<"Поліморфізм через посилання"<<endl;
+    Product product6("",0);
+    Item &iRef=product6;
+    iRef.display();
+
+    cout<<"Чисто віртуальна функція"<<endl;
+    //Item item();
+    cout<<ptr->getName()<<endl;
     return 0;
 }

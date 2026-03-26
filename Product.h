@@ -26,6 +26,8 @@ private:
 
     void StaticMethodBinding() const;
 
+    virtual std::string getName() const override;
+
     ~Product();
 
     void display() const override;

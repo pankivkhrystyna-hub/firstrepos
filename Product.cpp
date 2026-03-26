@@ -57,6 +57,10 @@ void Product::StaticMethodBinding() const {
   std::cout << "Static Binding in Product"<<std::endl;
 }
 
+std::string Product::getName() const {
+  return name;
+}
+
 Product::~Product() {}
 
 void Product::display() const  {

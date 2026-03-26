@@ -16,6 +16,7 @@ public:
     Item &operator=(const Item &rhs);
     virtual void display() const;
     virtual double getPrice() const;
+    virtual std::string getName() const=0;
     virtual ~Item();
 };
 

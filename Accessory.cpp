@@ -4,10 +4,10 @@
 
 Accessory::Accessory (const std::string &name, int price, const std::string &description, const std::string &category,
      const std::string &brand, int warrantyMonths)
-     : Electronics(name, price, description, category, brand, warrantyMonths) {
+     : Product(name, price, description, category), brand(brand) {
 }
 
-Accessory::Accessory(): Electronics("", 0, "", "", "",  0) {
+Accessory::Accessory(): Product("", 0, "", ""), brand("") {
 
 }
 

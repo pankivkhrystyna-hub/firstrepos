@@ -1,9 +1,11 @@
 #ifndef SHOP_CUSTOMER_H
 #define SHOP_CUSTOMER_H
 #include <string>
+//#include "Accessory.h"
 
 
-class Customer {
+class Customer// : public Accessory
+{
     private:
         std::string name;
         std::string email;

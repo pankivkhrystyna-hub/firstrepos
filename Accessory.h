@@ -1,9 +1,9 @@
 #ifndef SHOP_ACCESSORY_H
 #define SHOP_ACCESSORY_H
-#include "Electronics.h"
+#include "Product.h"
 
 
-class Accessory :public Electronics{
+class Accessory final :public Product{
 private:
  std::string brand;
 public:

@@ -1,4 +1,6 @@
 #include <iostream>
+
+#include "Accessory.h"
 #include "Customer.h"
 #include "Electronics.h"
 #include "Product.h"
@@ -47,5 +49,7 @@ int main() {
     cout<<"\nElectronics: "<<endl;
     Electronics electronics1("Iphoneee", 1234,"Beautiful", "electronic", "Apple", 12 );
     electronics1.display();
+    Accessory accessory1;
+    accessory1.display();
     return 0;
 }

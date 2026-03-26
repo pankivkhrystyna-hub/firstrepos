@@ -1,7 +1,3 @@
-//
-// Created by Христинка  on 26.03.2026.
-//
-
 #ifndef SHOP_ITEM_H
 #define SHOP_ITEM_H
 #include <string>
@@ -15,6 +11,7 @@ protected:
 public:
     Item();
     Item(int id, std::string name, int price);
+    Item &operator=(const Item &rhs);
     virtual void display() const;
     virtual ~Item();
 };

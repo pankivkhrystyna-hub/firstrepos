@@ -55,5 +55,10 @@ int main() {
     cout<<"Let's try create an order with object product:"<<endl;
     Order orderr(123,"Order with Product", 123000, "Processing", "Card",product4);
     orderr.display();
+
+    cout<<"\nПроблема статичної прив’язки методів"<<endl;
+    Item* ptr=new Product("Laptop");
+    ptr->StaticMethodBinding();
+
     return 0;
 }

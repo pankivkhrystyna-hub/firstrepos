@@ -24,6 +24,8 @@ private:
 
     friend std::istream& operator>>(std::istream& os, Product &other);
 
+    void StaticMethodBinding() const;
+
     ~Product();
 
     void display() const;

@@ -11,6 +11,8 @@ protected:
 public:
     Item();
     Item(int id, std::string name, int price);
+
+    void StaticMethodBinding() const;
     Item &operator=(const Item &rhs);
     virtual void display() const;
     virtual ~Item();

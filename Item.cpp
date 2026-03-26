@@ -7,6 +7,11 @@ Item::Item() : id(0), name("Unknown"), price(0) {
 Item::Item(int id, std::string name, int price)
     : id(id), name(name), price(price) {
 }
+
+void Item::StaticMethodBinding() const {
+     std::cout << "Static Binding in Item"<<std::endl;
+}
+
 Item &Item::operator=(const Item &rhs) {
     if (this != &rhs) {
         this->id = rhs.id;

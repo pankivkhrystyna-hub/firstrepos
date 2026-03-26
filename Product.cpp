@@ -52,6 +52,11 @@ std::istream& operator>>(std::istream& is, Product &other) {
   is>>other.category;
   return is;
 }
+
+void Product::StaticMethodBinding() const {
+  std::cout << "Static Binding in Product"<<std::endl;
+}
+
 Product::~Product() {}
 
 void Product::display() const  {

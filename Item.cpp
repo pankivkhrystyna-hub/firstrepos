@@ -22,10 +22,14 @@ Item &Item::operator=(const Item &rhs) {
 }
 
 void Item::display() const {
+    std::cout<<"From class Item"<<std::endl;
     std::cout << "id: " << id << std::endl;
     std::cout << "Name: " << name << std::endl;
     std::cout << "Price: " << price << std::endl;
 }
 
+double Item::getPrice() const {
+    return price;
+}
 Item::~Item() {
 }

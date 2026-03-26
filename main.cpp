@@ -57,8 +57,10 @@ int main() {
     orderr.display();
 
     cout<<"\nПроблема статичної прив’язки методів"<<endl;
-    Item* ptr=new Product("Laptop");
+    Item* ptr=new Product("laptop",12300,"2222","laptops");
     ptr->StaticMethodBinding();
+   cout<<"Після Override: "<<endl;
+    ptr->display();
 
     return 0;
 }

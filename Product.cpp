@@ -61,8 +61,8 @@ Product::~Product() {}
 
 void Product::display() const  {
 std::cout << "\nProduct: " << std::endl;
-  std::cout << name << std::endl;
-  std::cout << price << std::endl;
-  std::cout << description << std::endl;
-  std::cout << category << std::endl;
+  Item::display();
+  std::cout<<"From class Product"<<std::endl;
+  std::cout <<"Descriotion: " <<description << std::endl;
+  std::cout << "Category: "<<category << std::endl;
 }

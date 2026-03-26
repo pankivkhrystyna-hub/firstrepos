@@ -15,6 +15,7 @@ public:
     void StaticMethodBinding() const;
     Item &operator=(const Item &rhs);
     virtual void display() const;
+    virtual double getPrice() const;
     virtual ~Item();
 };
 

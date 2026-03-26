@@ -28,7 +28,7 @@ private:
 
     ~Product();
 
-    void display() const;
+    void display() const override;
 
 };
 

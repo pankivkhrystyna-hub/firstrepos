@@ -4,6 +4,7 @@
 #include "Item.h"
 #include "Printable.h"
 
+// Multiple Inheritance, override, copy, move
 class Product :public Item, public Printable {
 protected:
     std::string description;
@@ -16,8 +17,9 @@ protected:
     Product( std::string name);
     Product ();
 
-    Product (const Product &other);
+    Product (const Product &other); //copy
 
+    Product (Product &&other);
     Product operator+() const;
 
     Product operator+(const Product &other) const;
@@ -30,7 +32,7 @@ protected:
 
     virtual std::string getName() const override;
 
-    ~Product();
+    virtual ~Product();
 
     void display() const override;
 

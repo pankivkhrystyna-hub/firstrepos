@@ -2,7 +2,7 @@
 #define SHOP_ITEM_H
 #include <string>
 
-
+//StaticMethodBinding,Abstract Class with two virtual functions, operator =, virtual destructor
 class Item {
 protected:
     int id;
@@ -16,7 +16,7 @@ public:
     Item &operator=(const Item &rhs);
     virtual void display() const;
     virtual double getPrice() const;
-    virtual std::string getName() const=0;
+    virtual std::string getName() const=0; //virtual function
     virtual ~Item();
 };
 

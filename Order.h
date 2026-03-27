@@ -4,7 +4,7 @@
 #include "Printable.h"
 #include "Product.h"
 
-
+//has a, printable
 class Order: public Printable{
     private:
         int id;
@@ -12,7 +12,7 @@ class Order: public Printable{
         double totalamount;
         std::string status;
         std::string paymentmethod;
-        Product product; //has a
+        Product product;
     public:
     void print1() const override;
         static int count;

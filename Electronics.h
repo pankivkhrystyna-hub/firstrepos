@@ -2,7 +2,7 @@
 #define SHOP_ELECTRONICS_H
 #include <string>
 #include "Product.h"
-#include "Printable.h"
+
 
 class Electronics : public Product {
 private:

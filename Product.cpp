@@ -25,10 +25,23 @@ Product::Product(std::string name)
 
 Product::Product() {}
 
-Product::Product(const Product &other)
+Product::Product(const Product &other)  //copy
 : Item(other.id, other.name, other.price), description(other.description),category (other.category) {
   std::cout << "Copy constructor was called" << std::endl;
 }
+
+
+Product::Product(Product&& other) //move
+: Item(other.id, other.name, other.price) , description(other.description), category(other.category) {
+  std::cout << "Move constructor was called" << std::endl;
+  std::cout<<"\nNew order with moved data: "<<std::endl;
+  other.id = 0;
+  other.name = "";
+  other.price = 0;
+  other.description = "";
+  other.category = "";
+}
+
 
 Product  Product::operator+() const{
   return Product(name,price+price, description, category);

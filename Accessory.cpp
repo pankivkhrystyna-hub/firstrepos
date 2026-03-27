@@ -3,7 +3,7 @@
 #include <iostream>
 
 Accessory::Accessory (const std::string &name, int price, const std::string &description, const std::string &category,
-     const std::string &brand, int warrantyMonths)
+     const std::string &brand)
      : Product(name, price, description, category), brand(brand) {
 }
 

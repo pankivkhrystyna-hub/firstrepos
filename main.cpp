@@ -1,5 +1,4 @@
 #include <iostream>
-
 #include "Accessory.h"
 #include "Customer.h"
 #include "Electronics.h"
@@ -52,6 +51,8 @@ int main() {
     Accessory accessory1;
     accessory1.display();
 
+
+    cout<<"\nLaba 5:"<<endl;
     cout<<"Let's try create an order with object product:"<<endl;
     Order orderr(123,"Order with Product", 123000, "Processing", "Card",product4);
     orderr.display();
@@ -62,7 +63,7 @@ int main() {
    cout<<"Після Override: "<<endl;
     ptr->display();
 
-    cout<<"\nПоліморфізм через посилання"<<endl;
+    cout<<"\n6. Поліморфізм через посилання"<<endl;
     Product product6("",0);
     Item &iRef=product6;
     iRef.display();
@@ -70,6 +71,8 @@ int main() {
     cout<<"\nЧисто віртуальна функція"<<endl;
     //Item item();
     cout<<ptr->getName()<<endl;
+
+
 
     cout<<"\nінтерфейс "<<endl;
     product1.print1();

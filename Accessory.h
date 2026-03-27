@@ -10,6 +10,7 @@ public:
     Accessory(const std::string &name, int price, const std::string &description, const std::string &category,
      const std::string &brand, int warrantyMonths);
 
+    Accessory(std::string brand);
     Accessory();
 
     ~Accessory();

@@ -7,6 +7,10 @@ Accessory::Accessory (const std::string &name, int price, const std::string &des
      : Product(name, price, description, category), brand(brand) {
 }
 
+Accessory::Accessory(std::string brand): Product("", 0, "", ""), brand(brand) {
+
+}
+
 Accessory::Accessory(): Product("", 0, "", ""), brand("") {
 
 }

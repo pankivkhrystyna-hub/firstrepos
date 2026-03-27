@@ -62,13 +62,22 @@ int main() {
    cout<<"Після Override: "<<endl;
     ptr->display();
 
-    cout<<"Поліморфізм через посилання"<<endl;
+    cout<<"\nПоліморфізм через посилання"<<endl;
     Product product6("",0);
     Item &iRef=product6;
     iRef.display();
 
-    cout<<"Чисто віртуальна функція"<<endl;
+    cout<<"\nЧисто віртуальна функція"<<endl;
     //Item item();
     cout<<ptr->getName()<<endl;
+
+    cout<<"\nінтерфейс "<<endl;
+    product1.print1();
+    cout<<endl;
+    order1.print1();
+    cout<<endl;
+    Accessory accessory2("apple");
+    accessory2.print1();
+
     return 0;
 }

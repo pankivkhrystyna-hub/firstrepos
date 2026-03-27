@@ -16,4 +16,6 @@ add_executable(shop main.cpp
         Accessory.cpp
         Accessory.h
         Item.cpp
-        Item.h)
+        Item.h
+        Printable.cpp
+        Printable.h)

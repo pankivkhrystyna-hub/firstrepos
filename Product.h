@@ -2,12 +2,14 @@
 #define SHOP_PRODUCT_H
 #include <string>
 #include "Item.h"
+#include "Printable.h"
 
-class Product :public Item {
-private:
+class Product :public Item, public Printable {
+protected:
     std::string description;
     std::string category;
     public:
+    void print1() const override;
     Product( std::string name, int price, std::string description, std::string category);
     Product( std::string name, int price, std::string description);
     Product( std::string name, int price);

@@ -2,8 +2,17 @@
 #include "Item.h"
 #include <iostream>
 
+
+void Product::print1() const {
+  std::cout << "Замовлення номер: " << id << std::endl;
+  std::cout << "Клієнт: " << name << std::endl;
+  std::cout << "Сума до сплати: " << price << " грн." << std::endl;
+  std::cout << "Опис: " << description << std::endl;
+  std::cout << "Категорія: " << category << std::endl;
+}
+
 Product::Product(std::string name, int price ,std::string description, std::string category)
-  : Item(id, name,price), description(description), category(category) {}
+  : Item(id, name, price), description(description), category(category) {}
 
 Product::Product(std::string name, int price ,std::string description)
   : Item(id, name,price), description(description), category("") {}

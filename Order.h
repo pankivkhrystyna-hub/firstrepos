@@ -1,11 +1,11 @@
 #ifndef SHOP_ORDER_H
 #define SHOP_ORDER_H
 #include <string>
-
+#include "Printable.h"
 #include "Product.h"
 
 
-class Order {
+class Order: public Printable{
     private:
         int id;
         std::string name;
@@ -14,6 +14,7 @@ class Order {
         std::string paymentmethod;
         Product product; //has a
     public:
+    void print1() const override;
         static int count;
         //Перевантаження конструктора
         Order(int id, std::string name, double total, std::string status, std::string payment, Product product);

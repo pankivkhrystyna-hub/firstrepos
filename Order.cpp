@@ -1,6 +1,12 @@
 #include "Order.h"
 #include <iostream>
 
+void Order::print1() const {
+    std::cout << "Замовлення номер: " << this->id << std::endl;
+    std::cout << "Клієнт: " << name << std::endl;
+    std::cout << "Сума до сплати: " << totalamount << " грн." << std::endl;
+}
+
 int Order::count=0;
 
 Order::Order(int id, std::string name, double totalamount, std::string status, std::string paymentmethod, Product product)
@@ -36,7 +42,7 @@ product(order.product){
 }
 
 Order::Order(Order&& other) :
-id(other.id), name(other.name), totalamount(other.totalamount), status(other.status), paymentmethod(other.paymentmethod), product(product) {
+id(other.id), name(other.name), totalamount(other.totalamount), status(other.status), paymentmethod(other.paymentmethod), product(other.product) {
     std::cout << "\nMove constructor was called " << std::endl;
     std::cout<<"\nNew order with moved data: "<<std::endl;
     other.id = 0;

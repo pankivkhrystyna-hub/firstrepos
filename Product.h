@@ -21,6 +21,8 @@ protected:
 
     Product (Product &&other);
     Product operator+() const;
+    Product& operator=(const Product &other) = default;
+    Product& operator=(Product &&other) = default;
 
     Product operator+(const Product &other) const;
 
